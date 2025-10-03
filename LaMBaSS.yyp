@@ -36,9 +36,8 @@
   "name":"LaMBaSS",
   "resources":[
     {"id":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},},
-    {"id":{"name":"obj_button_manager","path":"objects/obj_button_manager/obj_button_manager.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
-    {"id":{"name":"obj_room_manager","path":"objects/obj_room_manager/obj_room_manager.yy",},},
+    {"id":{"name":"obj_game","path":"objects/obj_game/obj_game.yy",},},
     {"id":{"name":"rm_space","path":"rooms/rm_space/rm_space.yy",},},
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
