@@ -35,12 +35,20 @@
   },
   "name":"LaMBaSS",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},},
+    {"id":{"name":"obj_button_manager","path":"objects/obj_button_manager/obj_button_manager.yy",},},
+    {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
+    {"id":{"name":"obj_room_manager","path":"objects/obj_room_manager/obj_room_manager.yy",},},
+    {"id":{"name":"rm_space","path":"rooms/rm_space/rm_space.yy",},},
+    {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
+    {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
+    {"roomId":{"name":"rm_space","path":"rooms/rm_space/rm_space.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

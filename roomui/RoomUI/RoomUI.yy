@@ -1,0 +1,45 @@
+{
+  "$GMRoomUI":"",
+  "%Name":"RoomUI",
+  "children":[
+    {"$GMRUILayer":"v1","%Name":"TitleLayer","alignItems":2,"children":[
+        {"$GMRFlexPanel":"","%Name":"title_text","alignItems":2,"children":[
+            {"$GMRTextItem":"v2","%Name":"text_114A2572","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_114A2572","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"~Ludum Dare 58~","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
+          ],"flexDirection":0,"height":{"unit":3,"value":19.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":100.0,},"name":"title_text","nodeColour":4282939634,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":110.0,},},
+        {"$GMRFlexPanel":"","%Name":"play_button","alignItems":2,"children":[
+            {"$GMRFlexPanel":"","%Name":"text","alignItems":2,"children":[
+                {"$GMRTextItem":"v2","%Name":"text_1B4BD559","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_1B4BD559","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Play","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
+              ],"flexDirection":0,"height":{"unit":3,"value":19.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":10.0,},"marginLeft":{"unit":1,"value":50.0,},"marginRight":{"unit":1,"value":50.0,},"marginTop":{"unit":1,"value":10.0,},"name":"text","nodeColour":4294068808,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":110.0,},},
+            {"$GMRInstance":"v2","%Name":"inst_2D94B474","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2D94B474","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"action","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"play\"",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+          ],"flexDirection":0,"height":{"unit":3,"value":64.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":20.0,},"name":"play_button","nodeColour":4289327688,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":64.0,},},
+        {"$GMRFlexPanel":"","%Name":"rules_button","alignItems":2,"children":[
+            {"$GMRFlexPanel":"","%Name":"text","alignItems":2,"children":[
+                {"$GMRTextItem":"v2","%Name":"text_280BBFE8","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_280BBFE8","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Rules","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
+              ],"flexDirection":0,"height":{"unit":3,"value":19.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":10.0,},"marginLeft":{"unit":1,"value":50.0,},"marginRight":{"unit":1,"value":50.0,},"marginTop":{"unit":1,"value":10.0,},"name":"text","nodeColour":4294068808,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":110.0,},},
+            {"$GMRInstance":"v2","%Name":"inst_197F0041","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_197F0041","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"action","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"rules\"",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+          ],"flexDirection":0,"height":{"unit":3,"value":64.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":20.0,},"marginTop":{"unit":1,"value":20.0,},"name":"rules_button","nodeColour":4289327688,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":64.0,},},
+        {"$GMRFlexPanel":"","%Name":"exit_button","alignItems":2,"children":[
+            {"$GMRFlexPanel":"","%Name":"text","alignItems":2,"children":[
+                {"$GMRTextItem":"v2","%Name":"text_75C84BBC","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_75C84BBC","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"Exit","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
+              ],"flexDirection":0,"height":{"unit":3,"value":19.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":10.0,},"marginLeft":{"unit":1,"value":50.0,},"marginRight":{"unit":1,"value":50.0,},"marginTop":{"unit":1,"value":10.0,},"name":"text","nodeColour":4294068808,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":110.0,},},
+            {"$GMRInstance":"v2","%Name":"inst_65056D1C","colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps","stretchHeight":true,"stretchWidth":true,},"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_65056D1C","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"properties":[
+                {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},"propertyId":{"name":"action","path":"objects/obj_button/obj_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"exit\"",},
+              ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+          ],"flexDirection":0,"height":{"unit":3,"value":64.0,},"justifyContent":1,"marginBottom":{"unit":1,"value":20.0,},"marginTop":{"unit":1,"value":20.0,},"name":"exit_button","nodeColour":4289327688,"resourceType":"GMRFlexPanel","resourceVersion":"2.0","width":{"unit":3,"value":64.0,},},
+      ],"flexDirection":0,"gridX":16,"gridY":16,"justifyContent":0,"name":"TitleLayer","nodeColour":4294068443,"paddingBottom":{"unit":1,"value":100.0,},"paddingLeft":{"unit":1,"value":100.0,},"paddingRight":{"unit":1,"value":100.0,},"paddingTop":{"unit":1,"value":100.0,},"resourceType":"GMRUILayer","resourceVersion":"2.0",},
+  ],
+  "locked":false,
+  "name":"RoomUI",
+  "parent":{
+    "name":"LaMBaSS",
+    "path":"LaMBaSS.yyp",
+  },
+  "resourceType":"GMRoomUI",
+  "resourceVersion":"2.0",
+  "viewspaceChildren":[],
+  "visible":true,
+}
