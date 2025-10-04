@@ -1,0 +1,45 @@
+{
+  "$GMObject":"",
+  "%Name":"add_heal",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
+  "managed":true,
+  "name":"add_heal",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_add","path":"objects/cat_add/cat_add.yy",},"propertyId":{"name":"description","path":"objects/cat_add/cat_add.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Heal by {0}.",},
+  ],
+  "parent":{
+    "name":"Additional",
+    "path":"folders/Objects/Additional.yy",
+  },
+  "parentObjectId":{
+    "name":"cat_add",
+    "path":"objects/cat_add/cat_add.yy",
+  },
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":1,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"heal_by","filters":[],"listItems":[],"multiselect":false,"name":"heal_by","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"20","varType":0,},
+  ],
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":null,
+  "spriteMaskId":null,
+  "tags":[
+    "effect_add",
+  ],
+  "visible":true,
+}
