@@ -42,6 +42,7 @@
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
+    {"id":{"name":"spr_card","path":"sprites/spr_card/spr_card.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
