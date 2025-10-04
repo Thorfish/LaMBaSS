@@ -26,6 +26,18 @@ show_debug_message(power_mod);
 
 show_debug_message(card_cost);
 
+show_debug_message(my_type.description);
+
+description = "";
+show_debug_message(description);
+description += string(my_type.description, damage*power_mod, block*power_mod);
+description += "\n";
+
+description += string(my_power.description, my_power.description_val*power_mod);
+description += "\n";
+
+description += string(my_add.description, my_add.description_val*power_mod);
+
 function play(user, enemy) {
 	
 }

@@ -8,6 +8,7 @@
   "name":"type_damage",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"damage","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"description","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Deal {0} damage.",},
   ],
   "parent":{
     "name":"Type",
