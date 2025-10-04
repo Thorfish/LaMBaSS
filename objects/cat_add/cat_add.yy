@@ -1,22 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"add_heal",
+  "%Name":"cat_add",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"add_heal",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_add","path":"objects/cat_add/cat_add.yy",},"propertyId":{"name":"description","path":"objects/cat_add/cat_add.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Heal by {0}.",},
-  ],
+  "name":"cat_add",
+  "overriddenProperties":[],
   "parent":{
     "name":"Additional",
     "path":"folders/Objects/Additional.yy",
   },
-  "parentObjectId":{
-    "name":"cat_add",
-    "path":"objects/cat_add/cat_add.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,15 +26,13 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"heal_by","filters":[],"listItems":[],"multiselect":false,"name":"heal_by","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"20","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"description","filters":[],"listItems":[],"multiselect":false,"name":"description","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"description_val","filters":[],"listItems":[],"multiselect":false,"name":"description_val","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
-  "tags":[
-    "effect_add",
-  ],
   "visible":true,
 }

@@ -43,6 +43,7 @@
     {"id":{"name":"add_heal","path":"objects/add_heal/add_heal.yy",},},
     {"id":{"name":"battle_controller","path":"objects/battle_controller/battle_controller.yy",},},
     {"id":{"name":"card_effect","path":"objects/card_effect/card_effect.yy",},},
+    {"id":{"name":"cat_add","path":"objects/cat_add/cat_add.yy",},},
     {"id":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},},
     {"id":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},},
     {"id":{"name":"hand_controller","path":"objects/hand_controller/hand_controller.yy",},},
