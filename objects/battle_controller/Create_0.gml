@@ -64,4 +64,10 @@ function run_turn() {
 	
 	enemy_cards = [];
 	player_cards = [];
+	
+	show_debug_message(p1.health);
+	show_debug_message(p2.health);
+	
+	p1.block = 0;
+	p2.block = 0;
 }
