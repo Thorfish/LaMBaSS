@@ -8,6 +8,7 @@
   "name":"power_2_card",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},"propertyId":{"name":"multiplier","path":"objects/cat_power/cat_power.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},"propertyId":{"name":"description","path":"objects/cat_power/cat_power.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Requires 2 cards.",},
   ],
   "parent":{
     "name":"Power",

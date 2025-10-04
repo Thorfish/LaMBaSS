@@ -8,6 +8,8 @@
   "name":"power_take_damage",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},"propertyId":{"name":"multiplier","path":"objects/cat_power/cat_power.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0.5",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},"propertyId":{"name":"description_val","path":"objects/cat_power/cat_power.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"25",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},"propertyId":{"name":"description","path":"objects/cat_power/cat_power.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Take {0} damage.",},
   ],
   "parent":{
     "name":"Power",
