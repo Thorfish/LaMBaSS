@@ -63,4 +63,5 @@ if image_index == 1 && !clicked {
 		}
 	}
 	hand_controller.number_of_cards-=1
+	array_push(battle_controller.player_cards, effect)
 }

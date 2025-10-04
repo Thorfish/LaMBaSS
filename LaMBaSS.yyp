@@ -42,6 +42,7 @@
     {"id":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},},
     {"id":{"name":"add_heal","path":"objects/add_heal/add_heal.yy",},},
     {"id":{"name":"battle_controller","path":"objects/battle_controller/battle_controller.yy",},},
+    {"id":{"name":"battle_player","path":"objects/battle_player/battle_player.yy",},},
     {"id":{"name":"card_effect","path":"objects/card_effect/card_effect.yy",},},
     {"id":{"name":"cat_add","path":"objects/cat_add/cat_add.yy",},},
     {"id":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},},

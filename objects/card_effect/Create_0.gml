@@ -24,6 +24,19 @@ show_debug_message(damage);
 show_debug_message(block);
 show_debug_message(power_mod);
 
+function play_effect(user, enemy) {
+	my_add.play_effect(self, user, enemy);
+	my_power.play_effect(self, user, enemy);
+}
+
+function block_phase(user, enemy) {
+	user.gain_block(block * power_mod);
+}
+
+function damage_phase(user, enemy) {
+	enemy.take_damage(damage * power_mod);
+}
+
 show_debug_message(card_cost);
 
 show_debug_message(my_type.description);
