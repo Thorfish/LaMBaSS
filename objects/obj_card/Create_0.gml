@@ -5,3 +5,4 @@ clicked = false
 discarded = false
 depth = depth_
 
+audio = false

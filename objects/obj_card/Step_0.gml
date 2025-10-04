@@ -13,7 +13,7 @@ if clicked {
 } else {
 	y = lerp(y, room_height+100-hovered*100, 0.1)
 	x = lerp(x, room_width/2 - (hand_controller.number_of_cards/2)*card_spread + position*card_spread, 0.1)
-	image_angle = lerp(image_angle, -(position-hand_controller.number_of_cards/2)*10, 0.1)
+	image_angle = lerp(image_angle, -(position-hand_controller.number_of_cards/2)*10-5, 0.1)
 }
 
 if mouse_x < (bbox_left+bbox_right)/2+20 && mouse_x > (bbox_left+bbox_right)/2-20 && !discarded {
@@ -21,8 +21,13 @@ if mouse_x < (bbox_left+bbox_right)/2+20 && mouse_x > (bbox_left+bbox_right)/2-2
 		hovered = false	
 	}
 	hovered = true
+	if !audio {
+		audio_play_sound(card_sound1, 1,false,1,0,random_range(0.8,1.2))
+		audio = true
+	}
 } else {
 	hovered = false	
+	audio = false
 }
 
 if hovered {
