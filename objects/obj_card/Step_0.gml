@@ -62,7 +62,7 @@ if y < room_height/2+150 && !discarded {
 	active = false	
 }
 
-if active && !clicked {
+if active && !clicked && battle_controller.player_card_total + effect.card_cost <= 3 {
 	discarded = true
 	active = false
 	with (obj_card) {
@@ -72,6 +72,7 @@ if active && !clicked {
 	}
 	hand_controller.number_of_cards-=1
 	array_push(battle_controller.player_cards, effect)
+	battle_controller.player_card_total += effect.card_cost
 	var num_of_discarded = 0
 	with obj_card {
 		if discarded {
@@ -95,6 +96,9 @@ if discarded && mouse_x < bbox_right && mouse_x > bbox_left && mouse_y < bbox_bo
 		if effect_index >= 0 {
 			array_delete(battle_controller.player_cards, effect_index, 1)
 		}
+		
+		// Reduce the card counter on battle_controller
+		battle_controller.player_card_total -= effect.card_cost
 		
 		// Set position to be at the end of the hand
 		position = hand_controller.number_of_cards - 1
