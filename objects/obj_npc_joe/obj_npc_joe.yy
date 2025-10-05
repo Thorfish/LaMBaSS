@@ -9,8 +9,8 @@
   "name":"obj_npc_joe",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Npcs",
+    "path":"folders/Objects/Npcs.yy",
   },
   "parentObjectId":{
     "name":"obj_interactable",

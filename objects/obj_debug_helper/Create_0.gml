@@ -4,7 +4,7 @@ if (variable_global_exists("debug") && instance_exists(global.debug)) {
 }
 
 init_input();
-instance_create_layer(0, 0, "Utility", obj_dialogue_manager)
+instance_create_layer(0, 0, "Utility", obj_dialog_manager)
 
 global.debug = id;
 persistent = true;
