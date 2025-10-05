@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_button",
-    "path":"sprites/spr_button/spr_button.yy",
+    "name":"spr_dialog_box",
+    "path":"sprites/spr_dialog_box/spr_dialog_box.yy",
   },
   "spriteMaskId":null,
   "visible":true,

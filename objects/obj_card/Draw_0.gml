@@ -5,6 +5,7 @@ if active {
 } else {
 	draw_self()
 }
+draw_sprite_ext(spr_card_outer, card_type, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 var position_offset = -100
 
 var x_ = x + lengthdir_x(position_offset, image_angle-90)

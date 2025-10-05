@@ -41,7 +41,7 @@ function damage_phase(user, enemy) {
 }
 
 description = "";
-description += string(my_type.description, round(damage*power_mod),  round(block*power_mod));
+description += string(my_type.description, round(my_type.description_val*power_mod));
 description += "\n";
 
 description += string(my_power.description,  round(my_power.description_val*power_mod));

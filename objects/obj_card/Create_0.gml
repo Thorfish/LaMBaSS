@@ -3,6 +3,7 @@
 hovered = false
 clicked = false
 discarded = false
+loaded = false
 
 // if the card is glowing yellow or not
 active = false
@@ -14,8 +15,12 @@ audio = false
 effect = instance_create_depth(0,0,0,card_effect);
 description = effect.description;
 
+card_type = 0;
+
 if effect.my_type.object_index == type_damage {
-	image_index = 0	
+	card_type = 0	
 } else if effect.my_type.object_index == type_defence {
-	image_index = 1	
+	card_type = 1	
+} else if effect.my_type.object_index == type_extra {
+	card_type = 2
 }
