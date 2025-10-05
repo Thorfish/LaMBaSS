@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Cards",
-    "path":"folders/Objects/Cards.yy",
+    "path":"folders/Objects/BattleObjects/Cards.yy",
   },
   "parentObjectId":null,
   "persistent":false,

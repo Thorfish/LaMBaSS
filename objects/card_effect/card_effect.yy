@@ -8,8 +8,8 @@
   "name":"card_effect",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"BattleObjects",
+    "path":"folders/Objects/BattleObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
