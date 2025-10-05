@@ -134,10 +134,7 @@
   "sdfSpread":8,
   "size":24.0,
   "styleName":"Regular",
-  "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
-  },
+  "textureGroupId":null,
   "TTFName":"C:\\Users\\yhall\\Documents\\LaMBaSS\\fonts\\f_hack\\Hack.ttf",
   "usesSDF":false,
 }

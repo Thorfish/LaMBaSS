@@ -3,6 +3,7 @@
 hovered = false
 clicked = false
 discarded = false
+loaded = false
 
 // if the card is glowing yellow or not
 active = false
