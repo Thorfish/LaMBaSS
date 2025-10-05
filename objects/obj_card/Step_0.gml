@@ -14,7 +14,7 @@ if clicked {
 		}
 	}
 	x = lerp(x, room_width/2 - (num_of_discarded/2)*card_spread*5.5 - 100 + position*card_spread*5.5, 0.1)
-	y = lerp(y, 250,0.1)
+	y = lerp(y, 400,0.1)
 	image_angle = lerp(image_angle, 0, 0.1)
 } else {
 	y = lerp(y, room_height+100-hovered*100, 0.1)

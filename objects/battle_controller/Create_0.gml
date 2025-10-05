@@ -4,11 +4,12 @@ p2 = instance_create_depth(0,0,0,battle_player);
 player_cards = [];
 enemy_cards = [];
 
+obj_enemy_cards = [];
+for (i=0; i<3; i++) {
+	array_push(obj_enemy_cards, instance_create_depth(-100, 100, i, obj_enemy_card))
+}
+
 function run_turn() {
-	for (i=0; i<3; i++) {
-		array_push(enemy_cards, instance_create_depth(0,0,0,card_effect));	
-	}
-	
 	first_effects = (random(2) > 1)
 	//how many cards are being played
 	var num_player_cards = -1
@@ -70,6 +71,10 @@ function run_turn() {
 	}
 	
 	enemy_cards = [];
+	for (i=0; i<3; i++) {
+		array_push(enemy_cards, instance_create_depth(0,0,0,card_effect));	
+	}
+	
 	player_cards = [];
 	
 	show_debug_message(p1.health);
