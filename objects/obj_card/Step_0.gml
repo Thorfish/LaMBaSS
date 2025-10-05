@@ -2,6 +2,8 @@
 // You can write your code in this editor
 var card_spread = 30
 
+depth = x
+
 if clicked {
 	y = lerp(y, mouse_y+100, 0.1)
 	x = lerp(x, mouse_x, 0.1)

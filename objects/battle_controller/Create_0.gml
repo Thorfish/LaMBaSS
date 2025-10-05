@@ -94,4 +94,7 @@ function run_turn() {
 	for (i=0; i<3; i++) {
 		array_push(obj_enemy_cards, instance_create_depth(-100, 100, i, obj_enemy_card));	
 	}
+	repeat 3 {
+		hand_controller.draw_card()	
+	}
 }

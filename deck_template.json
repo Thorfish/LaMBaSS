@@ -1,0 +1,45 @@
+{
+  "deck_name": "Default Deck",
+  "deck_description": "A basic deck template",
+  "cards": [
+    {
+      "id": 0,
+      "card_type": 0,
+      "card_cost": 1,
+      "hovered": false,
+      "clicked": false,
+      "discarded": false,
+      "loaded": false,
+      "active": false,
+      "audio": false,
+      "description": "Deal 5 damage",
+      "effect": {
+        "damage": 5,
+        "block": 0,
+        "power_mod": 1.0,
+        "description": "Deal 1 damage",
+        "description_val": 5,
+        "my_type": {
+          "object_index": "type_damage",
+          "damage": 5,
+          "block": 0,
+          "description": "Deal 1 damage",
+          "description_val": 5
+        },
+        "my_power": {
+          "object_index": "power_free",
+          "multiplier": 0.0,
+          "description": "This card costs 2 cards",
+          "description_val": 0,
+          "card_cost": 0
+        },
+        "my_add": {
+          "object_index": "add_heal",
+          "heal_by": 0,
+          "description": "Heal for 1",
+          "description_val": 0
+        }
+      }
+    } ...
+  ]
+}
