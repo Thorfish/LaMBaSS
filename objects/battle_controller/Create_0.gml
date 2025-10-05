@@ -10,13 +10,20 @@ function run_turn() {
 	}
 	
 	first_effects = (random(2) > 1)
+	//how many cards are being played
+	var num_player_cards = -1
+	with obj_card {
+		if discarded {
+			num_player_cards += 1	
+		}
+	}
 	
 	if first_effects {
 		for (i=0; i<3; i++) {
 			enemy_cards[i].play_effect(p2, p1);
 		}
 		
-		for (i=0; i<3; i++) {
+		for (i=0; i<num_player_cards; i++) {
 			player_cards[i].play_effect(p1, p2);
 		}
 		
@@ -24,7 +31,7 @@ function run_turn() {
 			enemy_cards[i].block_phase(p2, p1);
 		}
 		
-		for (i=0; i<3; i++) {
+		for (i=0; i<num_player_cards; i++) {
 			player_cards[i].block_phase(p1, p2);
 		}
 		
@@ -33,11 +40,11 @@ function run_turn() {
 		}
 		
 		
-		for (i=0; i<3; i++) {
+		for (i=0; i<num_player_cards; i++) {
 			player_cards[i].damage_phase(p1, p2);
 		}
 	} else {
-		for (i=0; i<3; i++) {
+		for (i=0; i<num_player_cards; i++) {
 			player_cards[i].play_effect(p1, p2);
 		}
 		
@@ -45,7 +52,7 @@ function run_turn() {
 			enemy_cards[i].play_effect(p2, p1);
 		}
 		
-		for (i=0; i<3; i++) {
+		for (i=0; i<num_player_cards; i++) {
 			player_cards[i].block_phase(p1, p2);
 		}
 		
@@ -53,7 +60,7 @@ function run_turn() {
 			enemy_cards[i].block_phase(p2, p1);
 		}
 		
-		for (i=0; i<3; i++) {
+		for (i=0; i<num_player_cards; i++) {
 			player_cards[i].damage_phase(p1, p2);
 		}
 		
@@ -70,4 +77,11 @@ function run_turn() {
 	
 	p1.block = 0;
 	p2.block = 0;
+	player_card_total = 0;
+	//destroy all the played cards
+	with obj_card {
+		if discarded {
+			instance_destroy(self)	
+		}
+	}
 }
