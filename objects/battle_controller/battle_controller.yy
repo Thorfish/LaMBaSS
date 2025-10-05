@@ -10,8 +10,8 @@
   "name":"battle_controller",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"BattleObjects",
+    "path":"folders/Objects/BattleObjects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

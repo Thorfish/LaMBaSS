@@ -1,3 +1,3 @@
-if array_length(player_cards) > 2 {
-	run_turn()	
+if keyboard_check_pressed(vk_space) {
+	run_turn()
 }
