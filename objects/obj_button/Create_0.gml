@@ -15,6 +15,8 @@ function do_action() {
 			break;
 		case "rules":
 			show_debug_message("Rules not yet added!");
+			// Temporarily for testing cards
+			room_goto(rm_space);
 			break;
 		case "finishdeck":
 			if obj_deckbuilder_controller.cards_in_deck == 20 {

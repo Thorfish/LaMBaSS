@@ -1,26 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
-hovered = false
-clicked = false
-discarded = false
-loaded = false
-
-// if the card is glowing yellow or not
-active = false
-depth = depth_
-
-audio = false
 
 // Creating card here, move elsewhere later
 effect = instance_create_depth(0,0,0,card_effect);
 description = effect.description;
 
-card_type = 0;
+position = depth
 
 if effect.my_type.object_index == type_damage {
-	card_type = 0	
+	image_index = 0	
 } else if effect.my_type.object_index == type_defence {
-	card_type = 1	
+	image_index = 1	
 } else if effect.my_type.object_index == type_extra {
-	card_type = 2
+	image_index = 2	
 }
+
+array_push(battle_controller.enemy_cards, effect)

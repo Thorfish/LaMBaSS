@@ -97,7 +97,7 @@ function load_deck() {
     for (var i = 0; i < num; i++) {
         var card_instance = instance_create_depth(100, room_height/2, 0, obj_mini_card, {in_deck:true, loaded:true});
 	}
-	alarm[0] = 1
+	alarm[0] = 10
 }
 
 if !file_exists("deck") {

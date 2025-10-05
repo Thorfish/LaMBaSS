@@ -1,22 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"type_defence",
+  "%Name":"add_pierce",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"type_defence",
+  "name":"add_pierce",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"block","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"60",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"description","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Block {0} damage.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_add","path":"objects/cat_add/cat_add.yy",},"propertyId":{"name":"description","path":"objects/cat_add/cat_add.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Deal {0} piercing damage.",},
   ],
   "parent":{
-    "name":"Type",
-    "path":"folders/Objects/Type.yy",
+    "name":"Additional",
+    "path":"folders/Objects/Additional.yy",
   },
   "parentObjectId":{
-    "name":"cat_type",
-    "path":"objects/cat_type/cat_type.yy",
+    "name":"cat_add",
+    "path":"objects/cat_add/cat_add.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,14 +30,16 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"pierce_damage","filters":[],"listItems":[],"multiselect":false,"name":"pierce_damage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"25","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":null,
   "spriteMaskId":null,
   "tags":[
-    "effect_type",
+    "effect_add",
   ],
   "visible":true,
 }

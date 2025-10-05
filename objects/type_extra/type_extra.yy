@@ -1,15 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"type_defence",
+  "%Name":"type_extra",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"type_defence",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"block","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"60",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"description","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Block {0} damage.",},
-  ],
+  "name":"type_extra",
+  "overriddenProperties":[],
   "parent":{
     "name":"Type",
     "path":"folders/Objects/Type.yy",

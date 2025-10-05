@@ -1,22 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"type_defence",
+  "%Name":"power_free",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"type_defence",
+  "name":"power_free",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"block","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"60",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_type","path":"objects/cat_type/cat_type.yy",},"propertyId":{"name":"description","path":"objects/cat_type/cat_type.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Block {0} damage.",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},"propertyId":{"name":"multiplier","path":"objects/cat_power/cat_power.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-0.75",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"cat_power","path":"objects/cat_power/cat_power.yy",},"propertyId":{"name":"description","path":"objects/cat_power/cat_power.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Can be used for free.",},
   ],
   "parent":{
-    "name":"Type",
-    "path":"folders/Objects/Type.yy",
+    "name":"Power",
+    "path":"folders/Objects/Power.yy",
   },
   "parentObjectId":{
-    "name":"cat_type",
-    "path":"objects/cat_type/cat_type.yy",
+    "name":"cat_power",
+    "path":"objects/cat_power/cat_power.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -38,7 +38,7 @@
   "spriteId":null,
   "spriteMaskId":null,
   "tags":[
-    "effect_type",
+    "effect_power",
   ],
   "visible":true,
 }
