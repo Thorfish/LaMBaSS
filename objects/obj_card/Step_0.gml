@@ -49,7 +49,7 @@ if hovered {
 }
 
 if y < room_height/2+150 && !discarded {
-	image_index = 1 	
+	image_index = 4	
 } else {
 	image_index = 0	
 }
