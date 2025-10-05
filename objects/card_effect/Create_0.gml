@@ -23,6 +23,7 @@ my_power.modify_effect(self)
 function play_effect(user, enemy) {
 	my_add.play_effect(self, user, enemy);
 	my_power.play_effect(self, user, enemy);
+	my_type.play_effect(self, user, enemy);
 }
 
 function block_phase(user, enemy) {

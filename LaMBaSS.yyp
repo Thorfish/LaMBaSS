@@ -47,6 +47,7 @@
     {"id":{"name":"f_perfect","path":"fonts/f_perfect/f_perfect.yy",},},
     {"id":{"name":"m5x7","path":"fonts/m5x7/m5x7.yy",},},
     {"id":{"name":"add_heal","path":"objects/add_heal/add_heal.yy",},},
+    {"id":{"name":"add_pierce","path":"objects/add_pierce/add_pierce.yy",},},
     {"id":{"name":"battle_controller","path":"objects/battle_controller/battle_controller.yy",},},
     {"id":{"name":"battle_player","path":"objects/battle_player/battle_player.yy",},},
     {"id":{"name":"card_effect","path":"objects/card_effect/card_effect.yy",},},

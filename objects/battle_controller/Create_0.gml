@@ -12,7 +12,7 @@ for (i=0; i<3; i++) {
 function run_turn() {
 	first_effects = (random(2) > 1)
 	//how many cards are being played
-	var num_player_cards = -1
+	var num_player_cards = 0
 	with obj_card {
 		if discarded {
 			num_player_cards += 1	
