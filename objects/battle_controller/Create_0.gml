@@ -71,10 +71,6 @@ function run_turn() {
 	}
 	
 	enemy_cards = [];
-	for (i=0; i<3; i++) {
-		array_push(enemy_cards, instance_create_depth(0,0,0,card_effect));	
-	}
-	
 	player_cards = [];
 	
 	show_debug_message(p1.health);
@@ -88,5 +84,14 @@ function run_turn() {
 		if discarded {
 			instance_destroy(self)	
 		}
+	}
+	
+	with obj_enemy_card {
+		instance_destroy(self)
+	}
+	
+	obj_enemy_cards = [];
+	for (i=0; i<3; i++) {
+		array_push(obj_enemy_cards, instance_create_depth(-100, 100, i, obj_enemy_card));	
 	}
 }

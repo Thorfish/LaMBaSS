@@ -20,29 +20,27 @@ power_mod = 1 + my_power.multiplier;
 
 my_power.modify_effect(self)
 
-show_debug_message(damage);
-show_debug_message(block);
-show_debug_message(power_mod);
-
 function play_effect(user, enemy) {
 	my_add.play_effect(self, user, enemy);
 	my_power.play_effect(self, user, enemy);
 }
 
 function block_phase(user, enemy) {
-	user.gain_block(block * power_mod);
+	user.block += block * power_mod
 }
 
 function damage_phase(user, enemy) {
-	enemy.take_damage(damage * power_mod);
+	fdamage = damage * power_mod
+	if fdamage > enemy.block {
+		fdamage -= enemy.block
+		enemy.block = 0
+		enemy.health -= fdamage
+	} else {
+		enemy.block -= fdamage
+	}
 }
 
-show_debug_message(card_cost);
-
-show_debug_message(my_type.description);
-
 description = "";
-show_debug_message(description);
 description += string(my_type.description, round(damage*power_mod),  round(block*power_mod));
 description += "\n";
 
@@ -50,7 +48,3 @@ description += string(my_power.description,  round(my_power.description_val*powe
 description += "\n";
 
 description += string(my_add.description,   round(my_add.description_val*power_mod));
-
-function play(user, enemy) {
-	
-}
