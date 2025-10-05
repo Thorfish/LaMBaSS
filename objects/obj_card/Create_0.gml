@@ -21,4 +21,6 @@ if effect.my_type.object_index == type_damage {
 	card_type = 0	
 } else if effect.my_type.object_index == type_defence {
 	card_type = 1	
+} else if effect.my_type.object_index == type_extra {
+	card_type = 2
 }

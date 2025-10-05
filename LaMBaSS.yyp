@@ -70,6 +70,7 @@
     {"id":{"name":"stats_display","path":"objects/stats_display/stats_display.yy",},},
     {"id":{"name":"type_damage","path":"objects/type_damage/type_damage.yy",},},
     {"id":{"name":"type_defence","path":"objects/type_defence/type_defence.yy",},},
+    {"id":{"name":"type_extra","path":"objects/type_extra/type_extra.yy",},},
     {"id":{"name":"rm_deck_builder","path":"rooms/rm_deck_builder/rm_deck_builder.yy",},},
     {"id":{"name":"rm_space","path":"rooms/rm_space/rm_space.yy",},},
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
