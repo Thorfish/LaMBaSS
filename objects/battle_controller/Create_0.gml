@@ -77,6 +77,7 @@ function run_turn() {
 	
 	p1.block = 0;
 	p2.block = 0;
+	player_card_total = 0;
 	//destroy all the played cards
 	with obj_card {
 		if discarded {
