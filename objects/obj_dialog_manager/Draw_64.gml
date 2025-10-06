@@ -1,27 +1,24 @@
 switch (state) {
     case State.NULL:
+		global.game_state = GameState.OVERWORLD;
         break;
 
 	case State.STARTING:
-
+		global.game_state = GameState.DIALOG;
 		set_main_position();
 		set_name_position();
 	
-		reset_fade_timer();
 		state = State.FADING_IN;
-		
 		
 		break;
 	
     case State.FADING_IN:
-		show_debug_message("Fading in main");
 		fade_in(pos_main);
-		show_debug_message("Fading in name");
 		fade_in(pos_name);
 		
-		fade_timer--;
-		if (fade_timer <= 0) {
-			reset_fade_timer();
+		if (is_timer_reached_fade(10)) {
+			normalise_position(pos_main, "in");
+			normalise_position(pos_name, "in");
 			state = State.TYPING;
 		}
 		
@@ -30,13 +27,58 @@ switch (state) {
     case State.TYPING:
 		draw_dialog_box(pos_main);
 		draw_dialog_box(pos_name);
-		draw_text_ext(pos_name.start_pos.x + box_border_horizontal, pos_name.start_pos.y + box_border_vertical, current_speaker, font_get_size(draw_get_font()) + 3, pos_name.end_pos.x - pos_name.start_pos.x - box_border_horizontal * 2);
-		draw_text_ext(pos_main.start_pos.x + box_border_horizontal, pos_main.start_pos.y + box_border_vertical, current_text, font_get_size(draw_get_font()) + 3, pos_main.end_pos.x - pos_main.start_pos.x - box_border_horizontal * 2);
+
+		display_text(current_speaker, pos_name);
+		
+		if (interact) {
+			update_text_to_display();
+		} else {
+			update_text_to_display(0);
+		}
+		
+		display_text(text_to_display, pos_main);
+		
+		if (string_length(current_text) <= 0) {
+			state = State.WAITING;
+		}
+		
         break;
 
     case State.WAITING:
+		draw_dialog_box(pos_main);
+		draw_dialog_box(pos_name);
+		display_text(current_speaker, pos_name);
+		display_text(text_to_display, pos_main);
+		// display down arrow
+		
+		
+		if (interact) {
+			speaker_status = set_next_line();
+			if (speaker_status == "same") {
+				state = State.TYPING;
+			} else {
+				state = State.FADING_OUT;
+			}
+		}
+		
         break;
 
     case State.FADING_OUT:
+		fade_out(pos_main);
+		fade_out(pos_name);
+		
+		if (is_timer_reached_fade(10)) {
+			normalise_position(pos_main, "out");
+			normalise_position(pos_name, "out");
+			
+			if (speaker_status == "diff") {
+				state = State.STARTING;
+			} else {
+				state = State.ENDING;
+			}
+		}
         break;
+	case State.ENDING:
+		state = State.NULL;
+		break;
 }
