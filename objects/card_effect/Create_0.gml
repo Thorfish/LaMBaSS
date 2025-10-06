@@ -25,12 +25,12 @@ function play_effect(user, enemy) {
 }
 
 function block_phase(user, enemy) {
-	user.block += block * power_mod
+	user.block += round(block * power_mod)
 	my_power.block_phase(self, user, enemy)
 }
 
 function damage_phase(user, enemy) {
-	fdamage = damage * power_mod
+	fdamage = round(damage * power_mod)
 	if fdamage > enemy.block {
 		fdamage -= enemy.block
 		enemy.block = 0

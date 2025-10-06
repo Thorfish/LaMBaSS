@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"battle_player",
+  "%Name":"status_bleed",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"battle_player",
+  "name":"status_bleed",
   "overriddenProperties":[],
   "parent":{
-    "name":"BattleObjects",
-    "path":"folders/Objects/BattleObjects.yy",
+    "name":"Status Effects",
+    "path":"folders/Objects/Additional/Status Effects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"cat_status",
+    "path":"objects/cat_status/cat_status.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,8 +29,7 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"health","filters":[],"listItems":[],"multiselect":false,"name":"health","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"500","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"block","filters":[],"listItems":[],"multiselect":false,"name":"block","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"damage","filters":[],"listItems":[],"multiselect":false,"name":"damage","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"20","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
