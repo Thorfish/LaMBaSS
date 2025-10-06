@@ -2,7 +2,6 @@
   "$GMRoomUI":"",
   "%Name":"RoomUI",
   "children":[
-    {"$GMRUILayer":"v1","%Name":"UILayer_1","alignItems":2,"children":[],"flexDirection":0,"gridX":32,"gridY":32,"justifyContent":1,"name":"UILayer_1","nodeColour":4291686984,"resourceType":"GMRUILayer","resourceVersion":"2.0",},
     {"$GMRUILayer":"v1","%Name":"title_layer","alignItems":2,"children":[
         {"$GMRFlexPanel":"","%Name":"title_text","alignItems":2,"children":[
             {"$GMRTextItem":"v2","%Name":"text_114A2572","alignment":0,"charSpacing":0.0,"colour":4294967295,"flexProperties":{"$InstanceFlexProps":"v1","anchor":0,"resourceType":"InstanceFlexProps",},"fontId":{"name":"f_hack","path":"fonts/f_hack/f_hack.yy",},"frameH":0.0,"frameW":0.0,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"lineSpacing":0.0,"name":"text_114A2572","paragraphSpacing":0.0,"resourceType":"GMRTextItem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"text":"~Ludum Dare 58~","wrap":false,"x":0.0,"xorigin":0.0,"y":0.0,"yorigin":0.0,},
