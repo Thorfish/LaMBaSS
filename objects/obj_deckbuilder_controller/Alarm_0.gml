@@ -3,8 +3,8 @@
 var i = 0
 with obj_mini_card {
     // Create effect structure first if it doesn't exist
-    if (!variable_instance_exists(self, "effect") || self.effect == noone) {
-        self.effect = instance_create_depth(0, 0, 0, card_effect)
+    if (!variable_instance_exists(self, "effect") || effect == noone) {
+        effect = instance_create_depth(0, 0, 0, card_effect)
     }
     
     // Load card variables
@@ -18,7 +18,7 @@ with obj_mini_card {
                 
             // Check if this is a special variable that needs instance creation
             if (vname == "effect" || vname == "my_type" || vname == "my_power" || vname == "my_add") {
-                variable_instance_set(self, vname, instance_create_depth(0, 0, 0, val))
+                //variable_instance_set(self, vname, instance_create_depth(0, 0, 0, val))
             } else {
                 variable_instance_set(self, vname, val)
             }
@@ -33,8 +33,7 @@ with obj_mini_card {
     }
         
     // Similarly for effect variables
-    if (self.effect != noone) {
-        var effect_names = variable_instance_get_names(self.effect);
+        var effect_names = variable_instance_get_names(effect);
         for (var k = 0; k < array_length(effect_names); k++) {
             var vname = effect_names[k];
             var val = ini_read_real("effect_" + string(i), vname, -99);
@@ -45,29 +44,31 @@ with obj_mini_card {
                 // Check if we have a string value (base64 encoded)
                 if (str_val != "" && str_val != string(val)) {
                     var decoded_str = base64_decode(str_val)
-                    variable_instance_set(self.effect, vname, decoded_str)
+                    variable_instance_set(effect, vname, decoded_str)
                 } else if (val != -99) {
-                    variable_instance_set(self.effect, vname, val)
+                    variable_instance_set(effect, vname, val)
                 }
             } else if (val != -99) {
 				show_debug_message("Creating instance: " + vname + " with object index " + string(val))
 				if (vname == "my_type") {
-					self.effect.my_type = instance_create_depth(0, 0, 0, val)
-					show_debug_message("Created my_type instance: " + string(self.effect.my_type.object_index))
+					effect.my_type = instance_create_depth(0, 0, 0, val)
+					show_debug_message("Created my_type instance: " + string(effect.my_type.object_index))
 				} else if (vname == "my_power") {
-					self.effect.my_power = instance_create_depth(0, 0, 0, val)
-					show_debug_message("Created my_power instance: " + string(self.effect.my_power.object_index))
+					effect.my_power = instance_create_depth(0, 0, 0, val)
+					show_debug_message("Created my_power instance: " + string(effect.my_power.object_index))
 				} else if (vname == "my_add") {
-					self.effect.my_add = instance_create_depth(0, 0, 0, val)
-					show_debug_message("Created my_add instance: " + string(self.effect.my_add.object_index))
+					effect.my_add = instance_create_depth(0, 0, 0, val)
+					show_debug_message("Created my_add instance: " + string(effect.my_add.object_index))
 				}
 			}
         }
             
         // Repeat loading for effect.my_type, effect.my_power, effect.my_add similarly by getting variable names and reading ini values
         // For example:
-        if (self.effect.my_type != noone) {
-            var type_names = variable_instance_get_names(self.effect.my_type);
+		var type_names = variable_instance_get_names(effect);
+		show_debug_message("type names: " + string(type_names))
+        if (effect.my_type != noone) {
+            var type_names = variable_instance_get_names(effect.my_type);
             show_debug_message("Type instance exists, has " + string(array_length(type_names)) + " variables")
             for (var m = 0; m < array_length(type_names); m++) {
                 var vname = type_names[m];
@@ -77,13 +78,13 @@ with obj_mini_card {
                 // Check if we have a string value (base64 encoded)
                 if (str_val != "" && str_val != string(val)) {
                     var decoded_str = base64_decode(str_val)
-                    variable_instance_set(self.effect.my_type, vname, decoded_str)
+                    variable_instance_set(effect.my_type, vname, decoded_str)
                 } else if (val != -99) {
                     // Check if this is a special variable that needs instance creation
                     if (vname == "effect" || vname == "my_type" || vname == "my_power" || vname == "my_add") {
                         // Skip these - they're handled in the effect loading section
                     } else {
-                        variable_instance_set(self.effect.my_type, vname, val)
+                        variable_instance_set(effect.my_type, vname, val)
                     }
                 }
             }
@@ -92,8 +93,8 @@ with obj_mini_card {
         }
             
         // Repeat for my_power
-        if (self.effect.my_power != noone) {
-            var power_names = variable_instance_get_names(self.effect.my_power);
+        if (effect.my_power != noone) {
+            var power_names = variable_instance_get_names(effect.my_power);
             show_debug_message("Power instance exists, has " + string(array_length(power_names)) + " variables")
             for (var p = 0; p < array_length(power_names); p++) {
                 var vname = power_names[p];
@@ -103,13 +104,13 @@ with obj_mini_card {
                 // Check if we have a string value (base64 encoded)
                 if (str_val != "" && str_val != string(val)) {
                     var decoded_str = base64_decode(str_val)
-                    variable_instance_set(self.effect.my_power, vname, decoded_str)
+                    variable_instance_set(effect.my_power, vname, decoded_str)
                 } else if (val != -99) {
                     // Check if this is a special variable that needs instance creation
                     if (vname == "effect" || vname == "my_type" || vname == "my_power" || vname == "my_add") {
                         // Skip these - they're handled in the effect loading section
                     } else {
-                        variable_instance_set(self.effect.my_power, vname, val)
+                        variable_instance_set(effect.my_power, vname, val)
                     }
                 }
             }
@@ -118,8 +119,8 @@ with obj_mini_card {
         }
             
         // Repeat for my_add
-        if (self.effect.my_add != noone) {
-            var add_names = variable_instance_get_names(self.effect.my_add);
+        if (effect.my_add != noone) {
+            var add_names = variable_instance_get_names(effect.my_add);
             show_debug_message("Add instance exists, has " + string(array_length(add_names)) + " variables")
             for (var q = 0; q < array_length(add_names); q++) {
                 var vname = add_names[q];
@@ -129,31 +130,30 @@ with obj_mini_card {
                 // Check if we have a string value (base64 encoded)
                 if (str_val != "" && str_val != string(val)) {
                     var decoded_str = base64_decode(str_val)
-                    variable_instance_set(self.effect.my_add, vname, decoded_str)
+                    variable_instance_set(effect.my_add, vname, decoded_str)
                 } else if (val != -99) {
                     // Check if this is a special variable that needs instance creation
                     if (vname == "effect" || vname == "my_type" || vname == "my_power" || vname == "my_add") {
                         // Skip these - they're handled in the effect loading section
                     } else {
-                        variable_instance_set(self.effect.my_add, vname, val)
+                        variable_instance_set(effect.my_add, vname, val)
                     }
                 }
             }
         } else {
             show_debug_message("Add instance is noone!")
         }
-    }
     
     // Set description from effect after loading
-    if (self.effect != noone && variable_instance_exists(self.effect, "description")) {
-        self.description = self.effect.description
+    if (effect != noone && variable_instance_exists(effect, "description")) {
+        description = effect.description
     }
     
     // Debug: Show final instance types
-    if (self.effect != noone) {
-        show_debug_message("Final types - my_type: " + string(self.effect.my_type.object_index) + 
-                          ", my_power: " + string(self.effect.my_power.object_index) + 
-                          ", my_add: " + string(self.effect.my_add.object_index))
+    if (effect != noone) {
+        show_debug_message("Final types - my_type: " + string(effect.my_type.object_index) + 
+                          ", my_power: " + string(effect.my_power.object_index) + 
+                          ", my_add: " + string(effect.my_add.object_index))
     }
     if effect.my_type.object_index == type_damage {
 		image_index = 0	
