@@ -9,8 +9,9 @@ persistent = true;
 dialog = ds_map_create();
 
 #region Joe
-create_dialog("joe", "neutral", "1", "Joe", "What do you want?");
-create_dialog("joe", "neutral", "2", "Joe", "Jason?");
+create_dialog("joe", "neutral", "1", "Jason", "Bruhhh. What do you want?");
+create_dialog("joe", "neutral", "2", "Jason", "Minecraft?");
+create_dialog("joe", "neutral", "3", "Not Jason", "Yo wassup dude, did you wanna hang out with me? You seem like a very chill guy, and I just wanted to say hi to you.");
 #endregion
 //////////////////////////////////////////////////////////////////////////////////////////////////
 #region Dialog creation function
@@ -102,26 +103,8 @@ margin = 0.05;
 gui_width = display_get_gui_width();
 gui_height = display_get_gui_height();
 gap_size = 30;
-box_border_size = 64;
-
-// Main dialog box dimensions
-v_offset_main = 0.6; // Dialog box starts x% below the top
-		 
-pos_main = {
-	start_pos: { x: gui_width * margin, y: gui_height * v_offset_main },
-	current_pos: { x: gui_width * margin, y: gui_height * v_offset_main },
-	end_pos: { x: gui_width * (1 - margin), y: gui_height * (1 - margin) },
-}
-		
-// Name box dimensions
-show_debug_message("String height is: " + string(string_height(current_speaker)));
-var gap_size = 30;
-var box_border_size = 64;
-pos_name = {
-	start_pos: { x: gui_width * margin, y: gui_height * v_offset_main - string_height(current_speaker) - box_border_size - gap_size}, 
-	current_pos: { x: gui_width * margin, y: gui_height * v_offset_main - string_height(current_speaker) - box_border_size - gap_size}, 
-	end_pos: { x: gui_width * margin + string_width(current_speaker) + box_border_size, y: gui_height * v_offset_main - gap_size },
-}	
+box_border_horizontal = 29;
+box_border_vertical = 22;
 
 // Fading stuff
 fade_timer = 0;
@@ -134,15 +117,45 @@ function init_dialog_gui(dialog) {
 	state = State.STARTING;
 }
 
+function set_gui_border() {
+	margin = 0.1;
+	gui_width = display_get_gui_width();
+	gui_height = display_get_gui_height();
+}
+
+/// @description Sets the boundaries by setting starting position, current position, and ending position of main box
+function set_main_position() {
+	set_gui_border();
+	draw_set_font(m5x7);
+	v_offset_main = 0.7; // Dialog box starts x% below the 
+	
+	pos_main = {
+		start_pos: { x: gui_width * margin, y: gui_height * v_offset_main },
+		end_pos: { x: gui_width * (1 - margin), y: gui_height * (1 - margin) },
+	}
+	
+	pos_main.current_pos = variable_clone(pos_main.start_pos);
+}
+
+/// @description Sets the boundaries of the name box in relation to main box. Offsetted by string height of speaker and arbitrary values
+function set_name_position() {
+	draw_set_font(m5x7);
+	gap_size = 30;
+	box_border_horizontal = 29;
+	box_border_vertical = 22;
+	pos_name = {
+			start_pos: { x: gui_width * margin, y: gui_height * v_offset_main - string_height(current_speaker) - box_border_vertical * 2 - gap_size },
+			end_pos: { x: gui_width * margin + string_width(current_speaker) + box_border_horizontal * 2, y: gui_height * v_offset_main - gap_size },
+	}	
+	
+	pos_name.current_pos = variable_clone(pos_name.start_pos);
+}
+
 function draw_dialog_box(pos) {
 	draw_sprite_stretched(spr_dialog_box, 0, pos.start_pos.x, pos.start_pos.y, pos.end_pos.x - pos.start_pos.x, pos.current_pos.y - pos.start_pos.y);
-	show_debug_message("Stretch by: " + string(pos.current_pos.y - pos.start_pos.y));
-	show_debug_message(pos.start_pos.y);
-	show_debug_message(pos.current_pos.y);
 }
 
 function fade_in(pos) {
-	show_debug_message("Tried to draw a fade in");
 	draw_dialog_box(pos);
 	pos.current_pos.y = lerp(pos.current_pos.y, pos.end_pos.y, 0.5);
 	show_debug_message(pos.end_pos.y);
