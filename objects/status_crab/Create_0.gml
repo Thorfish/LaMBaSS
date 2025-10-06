@@ -2,5 +2,5 @@
 event_inherited();
 
 function recovery() {
-	target.health -= damage;	
+	target.health -= damage;
 }

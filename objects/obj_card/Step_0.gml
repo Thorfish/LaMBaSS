@@ -60,7 +60,7 @@ if y < room_height/2+200 && !discarded {
 } else {
 	active = false	
 }
-show_debug_message("active: " + string(active) + " clicked: " + string(clicked) + " battle_controller.player_card_total: " + string(battle_controller.player_card_total) + " effect.card_cost: " + string(effect.card_cost))
+//show_debug_message("active: " + string(active) + " clicked: " + string(clicked) + " battle_controller.player_card_total: " + string(battle_controller.player_card_total) + " effect.card_cost: " + string(effect.card_cost))
 if active && !clicked && battle_controller.player_card_total + effect.card_cost <= 3 {
 	discarded = true
 	active = false

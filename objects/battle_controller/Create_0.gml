@@ -82,9 +82,6 @@ function run_turn() {
 	// Activate status effects
 	_i = 0
 	while _i < array_length(status_effects) {
-		show_debug_message(_i)
-		show_debug_message(array_length(status_effects))
-		show_debug_message(status_effects[_i])
 		status_effects[_i].during()
 		status_effects[_i].duration -= 1
 		if status_effects[_i].duration < 0 {
