@@ -44,6 +44,7 @@ create_dialog("joe", "reject_fight", "1", "Not Jason", "Oh what you don't wanna 
 /// @param _speaker String: Actual name of the speaker
 /// @param _text String: The actual message being said
 /// @param _flag Array<String> (Optional): Differing branch paths for dialogue. Use branch_dialog() inside an array to create the struct
+/// @param state Enum<GameState> (Optional): If this is a terminal dialog line, it will try to transition to this game state after dialog ends
 /// 
 /// @example\n
 /// example: create_dialog("bimbo", "win", "1", "Sophie", "rekt nuub", [branch_dialog("yes", "joe/accept_fight")])
