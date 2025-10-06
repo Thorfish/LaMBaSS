@@ -1,4 +1,5 @@
 p1 = instance_create_depth(0,0,0,battle_player);
+p1.is_player = true
 p2 = instance_create_depth(0,0,0,battle_player);
 
 player_cards = [];

@@ -117,7 +117,7 @@ if (card_to_load.effect != noone) {
             var str_val = ini_read_string("add_" + string(deck_index), vname, "");
                 
             // Force numeric variables to always be numbers
-            if ((vname == "heal_by" || vname == "pierce_damage" || vname == "description_val" || vname == "damage") && val != -99) {
+            if ((vname == "heal_by" || vname == "pierce_damage" || vname == "description_val" || vname == "damage" || vname == "cards_drawn") && val != -99) {
                 variable_instance_set(card_to_load.effect.my_add, vname, val)
             } else {
                 // Check if we have a string value (base64 encoded)
