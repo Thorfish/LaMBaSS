@@ -10,16 +10,16 @@ function overworld() {
 	/////////////////////////////////////////////////
 	#region Movement
 	/////////////////////////////////////////////////
-	if (keyboard_check(global.input.up)) {
+	if (up) {
 		y -= 5;
 	}
-	if (keyboard_check(global.input.down)) {
+	if (down) {
 		y += 5;
 	}
-	if (keyboard_check(global.input.left)) {
+	if (left) {
 		x -= 5;
 	}
-	if (keyboard_check(global.input.right)) {
+	if (right) {
 		x += 5;
 	}
 

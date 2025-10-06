@@ -78,6 +78,7 @@
     {"id":{"name":"rm_world","path":"rooms/rm_world/rm_world.yy",},},
     {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"basic_multiplier","path":"scripts/basic_multiplier/basic_multiplier.yy",},},
+    {"id":{"name":"helper","path":"scripts/helper/helper.yy",},},
     {"id":{"name":"init_input","path":"scripts/init_input/init_input.yy",},},
     {"id":{"name":"process_interaction","path":"scripts/process_interaction/process_interaction.yy",},},
     {"id":{"name":"card_sound1","path":"sounds/card_sound1/card_sound1.yy",},},
