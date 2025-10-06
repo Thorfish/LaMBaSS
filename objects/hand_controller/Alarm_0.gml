@@ -94,7 +94,7 @@ if (card_to_load.effect != noone) {
             var str_val = ini_read_string("power_" + string(deck_index), vname, "");
                 
             // Force numeric variables to always be numbers
-            if ((vname == "multiplier" || vname == "self_damage" || vname == "description_val") && val != -99) {
+            if ((vname == "multiplier" || vname == "self_damage" || vname == "description_val" || vname == "played_once") && val != -99) {
                 variable_instance_set(card_to_load.effect.my_power, vname, val)
             } else {
                 // Check if we have a string value (base64 encoded)
