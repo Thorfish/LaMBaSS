@@ -9,6 +9,10 @@ persistent = true;
 dialog = ds_map_create();
 branch = [];
 
+enum Type {
+	
+}
+
 #region Joe
 create_dialog("joe", "neutral", "1", "Jason", "Bruhhh. What do you want?");
 
@@ -19,15 +23,13 @@ create_dialog("joe", "neutral", "2", "Bully", "Stinky poopy butthole");
 
 create_dialog("joe", "neutral", "3", "Not Jason", "Yo wassup dude, did you wanna hang out with me? You seem like a very chill guy, and I just wanted to say hi to you.");
 create_dialog("joe", "neutral", "3", "Not Jason", "Just kidding do you wanna fight instead");
-
 branch = [
 	branch_dialog("yes", "joe/accept_fight"), 
 	branch_dialog("no", "joe/reject_fight")
 ]
 create_dialog("joe", "neutral", "3", "Not Jason", "Fight this person?", branch);
 
-create_dialog("joe", "accept_fight", "1", "Not Jason", "Ok cool ig we fighting now.");
-
+create_dialog("joe", "accept_fight", "1", "Not Jason", "Ok cool ig we fighting now.", [], GameState.BATTLE);
 create_dialog("joe", "reject_fight", "1", "Not Jason", "Oh what you don't wanna fight now? Ok bruh whatever.");
 
 #endregion
@@ -45,14 +47,15 @@ create_dialog("joe", "reject_fight", "1", "Not Jason", "Oh what you don't wanna 
 /// 
 /// @example\n
 /// example: create_dialog("bimbo", "win", "1", "Sophie", "rekt nuub", [branch_dialog("yes", "joe/accept_fight")])
-function create_dialog(_character, _event, _id, _speaker, _text, _flag = []) {
+function create_dialog(_character, _event, _id, _speaker, _text, _flag = [], state = GameState.NULL) {
 	var character = ensure_map(dialog, _character);
 	var event = ensure_map(character, _event);
 	
 	var line = {
 		"speaker": _speaker,
 		"flag": _flag,
-		"text": _text						
+		"text": _text,
+		"game_state": state,
 	}
 	
 	if (!is_array(event[? _id])) {
@@ -66,7 +69,7 @@ function create_dialog(_character, _event, _id, _speaker, _text, _flag = []) {
 
 /// @description Creats a struct that includes the text displayed as an option and the path to new dialogue
 /// @param text String: Text to be displayed as an option
-/// @param path String: String for the path for new dialog, separated by /
+/// @param path String: String for the path for new dialog, separated by /. If the convo id is not included, it will choose a random dialog of the same character and event
 /// @example branch_dialog("yes", "joe/accept_fight")
 function branch_dialog(text, path) {
 	var array = sep_string(path, "/");
@@ -135,24 +138,19 @@ enum State {
 	ANSWERING,
 }
 
-enum Response {
-	NULL,
-	YES,
-	NO,
-}
-
-response = Response.NULL;
-
 state = State.NULL;
 
 current_dialog = [];
 current_speaker = "";
 current_text = "";
 current_flag = [];
+current_transition_state = GameState.NULL;
+
 text_to_display = "";
 dialog_index = 0;
 speaker_status = "";
 answer_index = 0;
+
 
 margin = 0.05;
 gui_width = display_get_gui_width();
@@ -166,7 +164,6 @@ fade_timer = 0;
 text_timer = 0;
 interact_timer = 0;
 
-/// @description Prints dialog to UI
 function init_dialog_gui(dialog) {
 	dialog_index = 0;
 	current_dialog = dialog;
@@ -189,9 +186,6 @@ function set_next_line() {
 	text_to_display = "";
 	
 	if (dialog_index < array_length(current_dialog)) {
-		if (array_contains(current_dialog[dialog_index].flag, response)) {
-			
-		}
 		
 		show_debug_message("Setting next line");
 		if (current_speaker == current_dialog[dialog_index].speaker) {
@@ -203,12 +197,13 @@ function set_next_line() {
 		current_speaker = current_dialog[dialog_index].speaker;
 		current_text = current_dialog[dialog_index].text;
 		current_flag = current_dialog[dialog_index].flag;
-		
+		current_transition_state = current_dialog[dialog_index].game_state;
 		
 		show_debug_message(current_text);
 		dialog_index++;
 	} else {
 		show_debug_message("No new lines, transition to dialog ending");
+		
 		dialog_index = 0;
 	}
 	

@@ -1,6 +1,7 @@
 switch (state) {
     case State.NULL:
-		global.game_state = GameState.OVERWORLD;
+		
+		
         break;
 
 	case State.STARTING:
@@ -46,6 +47,7 @@ switch (state) {
 			if (array_length(current_flag) > 0) {
 				state = State.ANSWERING;
 				interact_timer = 40;
+				answer_index = 0;
 			} else {
 				state = State.WAITING;
 			}
@@ -86,8 +88,14 @@ switch (state) {
 			}
 		}
         break;
+		
 	case State.ENDING:
 		state = State.NULL;
+		global.game_state = GameState.OVERWORLD;
+		
+		if (current_transition_state != GameState.NULL) {
+			global.game_state = current_transition_state;
+		}
 		
 		break;
 
@@ -124,4 +132,6 @@ switch (state) {
         break;
 }
 
-show_debug_message(state);
+if (global.game_state = GameState.BATTLE) {
+	show_debug_message("ITS BATTLIN TIME");
+}
