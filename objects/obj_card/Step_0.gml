@@ -8,7 +8,7 @@ var card_spread = 30
 // Handle different card states: clicked (being dragged), in play, or normal hand position
 if clicked {
 	// When card is clicked/dragged, follow mouse with slight offset
-	y = lerp(y, mouse_y+100, 0.1)
+	y = lerp(y, mouse_y+50, 0.1)
 	x = lerp(x, mouse_x, 0.1)
 	image_angle = lerp(image_angle, 0, 0.1)
 } else if discarded {
@@ -21,7 +21,7 @@ if clicked {
 	}
 	// Position played cards in a horizontal line at the top
 	x = lerp(x, room_width/2 - (num_of_discarded/2)*card_spread*5.6 - 95 + position*card_spread*5.6, 0.1)
-	y = lerp(y, 500,0.1)
+	y = lerp(y, 600,0.1)
 	image_angle = lerp(image_angle, 0, 0.1)
 } else {
 	// Normal hand position - cards arranged in a fan pattern at bottom of screen
@@ -80,7 +80,7 @@ if hovered {
 
 // CARD ACTIVATION LOGIC
 // Card becomes active when moved to upper half of screen and not in play
-if y < room_height/2+200 && !discarded {
+if y < 5*room_height/6 && !discarded {
 	active = true 	
 } else {
 	active = false	
