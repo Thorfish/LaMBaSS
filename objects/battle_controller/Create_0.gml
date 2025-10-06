@@ -10,6 +10,7 @@ for (i=0; i<3; i++) {
 }
 
 function run_turn() {
+	audio_play_sound(clash_sound,0,0,1,0,random_range(0.9,1.1))
 	first_effects = (random(2) > 1)
 	//how many cards are being played
 	var num_player_cards = 0

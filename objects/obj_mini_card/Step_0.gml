@@ -15,11 +15,14 @@ if clicked {
 
 if mouse_check_button_pressed(mb_left) && active {
 	clicked = true	
+	audio_play_sound(card_sound1,0,0,1,0,random_range(0.8,1.2))
 } else if mouse_check_button_released(mb_left) {
 	if in_deck && x < 300 {
 		in_deck = false	
+		audio_play_sound(card_sound1,0,0,1,0,random_range(0.8,1.2))
 	} else if !in_deck && x > 300 {
 		in_deck = true	
+		audio_play_sound(card_sound1,0,0,1,0,random_range(0.8,1.2))
 	}
 	//reset the positions of every discarded card
 	var i = 0
