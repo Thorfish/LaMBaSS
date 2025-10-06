@@ -20,7 +20,8 @@ function draw_card() {
 		number_of_cards += 1
 		instance_destroy(card_to_draw)
 	} else {
-		instance_create_depth(100,room_height-50,i,obj_card, {position: i, depth_:i})
+		//no more cards
+		
 	}
 }
 

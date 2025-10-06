@@ -55,7 +55,7 @@ if hovered {
 	depth = -x
 }
 
-if y < room_height/2+150 && !discarded {
+if y < room_height/2+200 && !discarded {
 	active = true 	
 } else {
 	active = false	
