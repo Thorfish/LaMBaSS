@@ -15,6 +15,7 @@ function draw_card() {
 		}
 		deck_index = card_to_draw.card_id
 		i = instance_number(obj_card)
+		audio_play_sound(card_sound1,0,0,1,0,random_range(0.8,1.2))
 		card_to_load = instance_create_depth(100,room_height-50,i,obj_card, {position: i, depth_:i})
 		alarm[0] = 5
 		number_of_cards += 1
