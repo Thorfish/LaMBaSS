@@ -37,9 +37,8 @@ if mouse_x < (bbox_left+bbox_right)/2+20 && mouse_x > (bbox_left+bbox_right)/2-2
 	hovered = false	
 	audio = false
 }
-
 if hovered {
-	depth = -1
+	depth = -room_width
 	if (mouse_check_button(mb_left)) {
 		var clicked_ = 0
 		with obj_card {
@@ -53,7 +52,7 @@ if hovered {
 		clicked = false	
 	}
 } else {
-	depth = depth_
+	depth = -x
 }
 
 if y < room_height/2+150 && !discarded {
@@ -61,7 +60,7 @@ if y < room_height/2+150 && !discarded {
 } else {
 	active = false	
 }
-
+show_debug_message("active: " + string(active) + " clicked: " + string(clicked) + " battle_controller.player_card_total: " + string(battle_controller.player_card_total) + " effect.card_cost: " + string(effect.card_cost))
 if active && !clicked && battle_controller.player_card_total + effect.card_cost <= 3 {
 	discarded = true
 	active = false
@@ -116,3 +115,4 @@ if discarded && mouse_x < bbox_right && mouse_x > bbox_left && mouse_y < bbox_bo
 		}
 	}
 }
+

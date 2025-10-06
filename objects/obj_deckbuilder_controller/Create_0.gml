@@ -2,16 +2,26 @@
 // You can write your code in this editor
 cards_in_deck = 0
 
+function load_deck_() {
+	var num = ini_read_real("num", "num", 0);
+	show_debug_message("num: " + string(num))
+    for (var i = 0; i <= num; i++) {
+        var card_instance = instance_create_depth(100, room_height/2, 0, obj_mini_card, {in_deck:true, loaded:true});
+	}
+	alarm[0] = 10
+}
+
 
 function generate_deck() {
 	var temp1 = instance_create_depth(-100, -100, 0, battle_controller)
-	var temp2 = instance_create_depth(-100,-100,0, hand_controller)
-	repeat 15 {
+	var temp2 = instance_create_depth(-100,-100,0, hand_controller, {deckbuilder:true})
+	repeat 20 {
 		instance_create_depth(-100,-100,0,obj_card)	
 	}
 	
 	var j = 0
 	with obj_card {
+		show_debug_message(j)
 		var names = variable_instance_get_names(self)
 		// save the cards numeric and string variables
 		for (var i=0; i<array_length(names); i+=1) {
@@ -85,27 +95,28 @@ function generate_deck() {
 		j+=1
 		instance_destroy(self)
 	}
+	with obj_deck_card {
+		instance_destroy(self)
+	}
+	with obj_enemy_card {
+		instance_destroy(self)	
+	}
+	with stats_display {
+		instance_destroy(self)	
+	}
 	instance_destroy(temp1)
 	instance_destroy(temp2)
 	ini_write_real("num", "num", j-1)
-	load_deck()
+	load_deck_()
 }	
-
-function load_deck() {
-	var num = ini_read_real("num", "num", 0);
-    
-    for (var i = 0; i < num; i++) {
-        var card_instance = instance_create_depth(100, room_height/2, 0, obj_mini_card, {in_deck:true, loaded:true});
-	}
-	alarm[0] = 10
-}
 
 if !file_exists("deck") {
 	ini_open("deck")
+	show_debug_message("generate deck")
 	generate_deck()	
 } else {
 	ini_open("deck")	
-	load_deck()
+	load_deck_()
 }
 
 

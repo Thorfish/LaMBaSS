@@ -27,6 +27,7 @@
   "height":192,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"a46beb3d-8faa-439b-bc54-5eeb9ba679a2","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"a46beb3d-8faa-439b-bc54-5eeb9ba679a2","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"c233f846-3d54-4ed3-8d75-d8030eb244d9","blendMode":0,"displayName":"default","isLocked":false,"name":"c233f846-3d54-4ed3-8d75-d8030eb244d9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_card_inner",
