@@ -70,6 +70,7 @@
     {"id":{"name":"obj_player_overworld","path":"objects/obj_player_overworld/obj_player_overworld.yy",},},
     {"id":{"name":"power_2_card","path":"objects/power_2_card/power_2_card.yy",},},
     {"id":{"name":"power_free","path":"objects/power_free/power_free.yy",},},
+    {"id":{"name":"power_play_twice","path":"objects/power_play_twice/power_play_twice.yy",},},
     {"id":{"name":"power_take_damage","path":"objects/power_take_damage/power_take_damage.yy",},},
     {"id":{"name":"stats_display","path":"objects/stats_display/stats_display.yy",},},
     {"id":{"name":"type_damage","path":"objects/type_damage/type_damage.yy",},},

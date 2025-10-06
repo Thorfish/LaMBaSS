@@ -28,6 +28,7 @@ function play_effect(user, enemy) {
 
 function block_phase(user, enemy) {
 	user.block += block * power_mod
+	my_power.block_phase(self, user, enemy)
 }
 
 function damage_phase(user, enemy) {
@@ -39,6 +40,7 @@ function damage_phase(user, enemy) {
 	} else {
 		enemy.block -= fdamage
 	}
+	my_power.damage_phase(self, user, enemy)
 }
 
 description = "";
