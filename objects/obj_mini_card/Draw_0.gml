@@ -2,12 +2,13 @@
 // You can write your code in this editor
 if bbox_bottom < room_height-20 && bbox_top > 90 {
 	if active {
-		draw_sprite_ext(sprite_index, image_index, x,y, image_xscale, image_yscale, image_angle, c_yellow, image_alpha)
+	draw_sprite_ext(sprite_index, image_index, x,y, image_xscale, image_yscale, image_angle, c_yellow, image_alpha)
 	} else {
 		draw_self()
 	}
+	draw_sprite_ext(spr_card_outer, card_type, x, y, image_xscale, image_yscale, image_angle, c_white, image_alpha);
 
-	var position_offset = -50
+	var position_offset = -40
 
 	var x_ = x + lengthdir_x(position_offset, image_angle-90)
 	var y_ = y + lengthdir_y(position_offset, image_angle-90)
